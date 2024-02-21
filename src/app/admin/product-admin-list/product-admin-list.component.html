@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+<div class="min-h-screen flex flex-row bg-gray-100">
+    <app-header-admin></app-header-admin>
+<div class="w-full mt-28 mx-4 pl-2 overflow-x-auto shadow-md sm:rounded-lg">
+    <a href="dashboard/product/add">
+    <button type="button" class="mr-3 my-3  text-[16px] bg-blue-500 hover:bg-blue-700 text-white py-1 px-4 rounded focus:outline-none 
+    focus:shadow-outline">Add New Product</button>
+    </a>
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th>
+                  #
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Product name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                images
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Price
+                </th>
+                <th scope="col" class="px-6 py-3">
+                CATEGORY
+                </th>
+                <th scope="col" class="px-6 py-3">
+                description
+                </th>
+                <th scope="col" class="px-6 py-3">
+               
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (product of products; track products.id){
+            <tr>
+              <th>
+                {{product.id}}
+              </th>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 ">
+                    {{product.name}} 
+                </th>
+                <td class="px-6 py-4">
+                <img src="{{product.image}}" alt="" class="w-28"> 
+                </td>
+                <td class="px-6 py-4">
+                    {{product.price}}
+                </td>
+                <td class="px-6 py-4">
+                    {{product.cate_id}}
+                </td>
+                <td class="px-6 py-4">
+                    {{product.detail}}
+                </td>
+                <td class="pt-16 px-5 flex items-center justify-center">
+                    <a href="/dashboard/edit-product/{{product.id}}">
+                        <button type="button"
+                        class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded 
+                        focus:outline-none focus:shadow-outline">Edit</button>
+                    </a>   
+                    <button type="button" data-id="" class="btn_delete text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded 
+                    focus:outline-none focus:shadow-outline" (click)="handleDelProduct(product.id)">Delete</button>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+</div>

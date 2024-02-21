@@ -1,0 +1,86 @@
+
+<div class="my-8 sm:mx-auto sm:w-full sm:max-w-md">
+  <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+    Login to your account
+  </h2>
+  <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+    <form
+      (ngSubmit)="onSubmit()"
+      [formGroup]="loginForm"
+      class="space-y-6"
+      id="login-form"
+    >
+      <label for="userName" class="block text-sm font-medium text-gray-700"
+        >Username</label
+      >
+      <input
+        type="text"
+        placeholder="Enter Username"
+        class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+        id="userName"
+        formControlName="username"
+      />
+      <div
+        *ngIf="
+          !loginForm.controls.username?.valid &&
+          (loginForm.controls.username?.dirty ||
+            loginForm.controls.username?.touched)
+        "
+      >
+        <pre>Tên đăng nhập không để trống</pre>
+      </div>
+      <label
+        for="inputPassword3"
+        class="block text-sm font-medium text-gray-700"
+        >Password</label
+      >
+      <input
+        type="password"
+        placeholder="Enter Password"
+        class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+        id="inputPassword3"
+        formControlName="password"
+      />
+      <div
+        *ngIf="
+          !loginForm.controls.password?.valid &&
+          (loginForm.controls.password?.dirty ||
+            loginForm.controls.password?.touched)
+        "
+      >
+        <pre>Password không để trống</pre>
+      </div>
+      <label
+        for="inputPassword3"
+        class="block text-sm font-medium text-gray-700"
+        >Email</label
+      >
+      <input
+        type="email"
+        placeholder="Enter email"
+        class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+        id="inputPassword3"
+        formControlName="email"
+      />
+      <div
+        *ngIf="
+          !loginForm.controls.email?.valid &&
+          (loginForm.controls.email?.dirty ||
+            loginForm.controls.email?.touched)
+        "
+      >
+        <pre>Không đúng định dạng Email</pre>
+      </div>
+      <button
+        type="submit"
+        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      [disabled]="!loginForm.valid">
+        Sign in
+      </button>
+      <div class="mess">
+        {{ message }}
+      </div>
+    </form>
+  </div>
+</div>
+<app-footer-component></app-footer-component>

@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+<div class="min-h-screen flex flex-row bg-gray-100">
+    <app-header-admin></app-header-admin>
+<div class="my-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900" >Edit New Product</h2>
+    <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <form  [formGroup]="productForm" class="space-y-6" id="edit-form" (ngSubmit)="onSubmit()">
+            <label class="block text-sm font-medium text-gray-700">PRODUCT NAME</label>
+            <input type="text" name=""  placeholder="Enter Product Name" formControlName = "name" id="prd-name" value="" class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
+            <div *ngIf="
+            !productForm.controls.name?.valid &&
+            (productForm.controls.name?.dirty ||
+            productForm.controls.name?.touched)
+          ">
+          <pre>Không để trống</pre>
+            </div>
+            <label class="block text-sm font-medium text-gray-700">IMAGES</label>
+            <input type="text" name="" placeholder="Enter Images" formControlName = "image" id="prd-img" value="" class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
+            <div *ngIf="
+            !productForm.controls.image?.valid &&
+            (productForm.controls.image?.dirty ||
+            productForm.controls.image?.touched)
+          ">
+          <pre>Không để trống</pre>
+            </div>
+            <label class="block text-sm font-medium text-gray-700">PRICE</label>
+            <input type="number" name="" placeholder="Enter Price" formControlName = "price" value="" id="prd-price" class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
+            <div *ngIf="
+            !productForm.controls.price?.valid &&
+            (productForm.controls.price?.dirty ||
+            productForm.controls.price?.touched)
+          ">
+          <pre>Không để trống</pre>
+            </div>
+            <label class="block text-sm font-medium text-gray-700" >CATEGORY</label>
+            <input type="number" name="" placeholder="Enter Category" formControlName="cate_id" value="" id="prd-category" class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
+            <div *ngIf="
+            !productForm.controls.cate_id?.valid &&
+            (productForm.controls.cate_id?.dirty ||
+            productForm.controls.cate_id?.touched)
+          ">
+          <pre>Không để trống</pre>
+            </div>
+            <label class="block text-sm font-medium text-gray-700">DESCRIPTION</label>
+            <input type="text" name="" placeholder="Enter Description"  formControlName = "detail" value="" id="prd-desc" class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
+            <div *ngIf="
+            !productForm.controls.detail?.valid &&
+            (productForm.controls.detail?.dirty ||
+            productForm.controls.detail?.touched)
+          ">
+          <pre>Không để trống</pre>
+            </div>
+            <pre>{{mess}}</pre>
+            <button class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Edit</button>
+        </form>
+    </div>
+</div>
+</div>

@@ -1,57 +1,32 @@
-<div id="content">
-    <div class="container">
-      <div class="row">
-        <div class="product1 col-3 col-sm-4 ">
-        <div class="card" style="width: 18rem;">
-          <img src="https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/1/31/638107858631679725_iphone-14-pro-max-dd-1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{product[0].title}}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="product1 col-6 col-sm-4 ">
-        <div class="card" style="width: 18rem;">
-          <img src="https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/1/31/638107858631679725_iphone-14-pro-max-dd-1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="product1 col-6 col-sm-4 ">
-        <div class="card" style="width: 18rem;">
-          <img src="https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/1/31/638107858631679725_iphone-14-pro-max-dd-1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="product1 col-6 col-sm-4 ">
-        <div class="card" style="width: 18rem;">
-          <img src="https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/1/31/638107858631679725_iphone-14-pro-max-dd-1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="product1 col-6 col-sm-4 ">
-        <div class="card" style="width: 18rem;">
-          <img src="https://images.fpt.shop/unsafe/fit-in/214x214/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/1/31/638107858631679725_iphone-14-pro-max-dd-1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    
-    </div>
+<div class=" mx-10 my-10 max-h-full px-20">
+  <div class="my-5">
+      <h1>Store</h1>
   </div>
+  <div>
+      <button class="categoryAll border rounded-2xl px-4 p-3 mr-3 hover:bg-black hover:text-white">ALL</button>
   </div>
+  <div class="my-5">
+    <h1>Bộ lọc</h1>
+</div>
+  <form [formGroup]="formfilter" (ngSubmit)="onFilter()">
+    <input type="number" formControlName="minprice"/>
+    <input type="number" formControlName="maxprice"/>
+    <button type="submit" class="categoryAll border rounded-2xl px-4 p-3 mr-3 hover:bg-black hover:text-white">Lọc</button>
+</form>
+  <div class="flex grid grid-cols-5 gap-20">
+      <div *ngFor="let product of products"  class="">
+
+              <a href="/product-detail/{{product.id}}" class="no-underline">
+               <div class="my-5">
+                  <div class="0">
+                      <img src="{{ product.image }}" alt="" class="img rounded-2xl h-[400px] w-{400px}">
+                  </div>
+                      <h1 class="my-3 text-black text-xl">{{ product.name }}</h1>
+                      <span>{{product.detail}}</span>
+                      <p class="text-red-500 my-3">{{ product.price }} USD</p>
+              </div>
+              </a>
+      </div>
+  </div>
+</div>
+<app-footer-component></app-footer-component>

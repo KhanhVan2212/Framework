@@ -3,4 +3,5 @@ export interface iProduct{
     image: string;
     title: string;
     price: number;
+    sales :boolean;
 }

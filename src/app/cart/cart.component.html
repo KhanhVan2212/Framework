@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+
+<div class="min-h-screen flex flex-row bg-gray-100 ">
+<div class="w-full mt-28 mx-4 pl-2 overflow-x-auto shadow-md sm:rounded-lg">
+    <h1 class="mr-3 my-3  text-[25px] font-semibold "> Giỏ hàng
+    </h1>
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 p-20" >
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
+            <tr>
+                <th>
+                  #
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Ảnh
+                    </th>
+                <th scope="col" class="px-6 py-3">
+                    Tên sản phẩm
+                </th>
+               
+                <th scope="col" class="px-6 py-3">
+                   Số lượng
+                </th>
+                <th scope="col" class="px-6 py-3">
+                Đơn giá
+                </th>
+                <th scope="col" class="px-6 py-3">
+                Thành tiền
+                </th>
+                <th scope="col" class="px-6 py-3">
+
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cart of carts; let i = index">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 ">
+                    {{i+1}}
+                </th>
+                <td class="px-6 py-4">
+                    <img src="{{cart.image}}" alt="" width="80">
+                </td>
+                <td class="px-6 py-4">
+                    {{cart.name}}
+                </td>   
+                <td class="px-6 py-4">
+                    <input type="number" (change)="onChange(cart.pid,$any($event))" [value]="cart.quantity">
+                </td>
+                <td class="px-6 py-4">
+                    {{cart.price}}
+                </td>
+                <td class="px-6 py-4">
+                    {{cart.price*cart.quantity}}
+                </td>
+
+                <td class="pt-16 px-5 flex items-center justify-center"> 
+                    <button type="button"  data-id="" class="btn_delete text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded 
+                    focus:outline-none focus:shadow-outline" (click)="DelProductInCart(cart.pid)"  >Delete</button>
+                </td>
+            </tr>
+            
+        </tbody>
+        <a href="/checkout" class="signup bg-indigo-600 px-4 py-2 rounded text-white hover:bg-indigo-500 text-sm no-underline">Thanh toán</a>
+    </table>
+
+    <h1 class="mr-3 my-3   text-[20px] font-semibold" >
+        Tổng tiền: {{total}}
+    </h1>
+</div>
+</div>
+

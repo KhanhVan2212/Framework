@@ -1,0 +1,15 @@
+.col{
+    display: flex;
+    padding-top: 150px;
+    
+}
+.image{
+    padding-right: 50px;
+}
+.h1 , .h3 , p{
+    padding-top: 20px;
+}
+.product-detail{
+    padding-right: 300px;
+    
+}

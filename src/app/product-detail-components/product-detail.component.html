@@ -1,0 +1,18 @@
+<div class="mx-auto pl-20 ">
+  <h5 class="my-5 ml-20">Store / {{product?.name}}  </h5>
+  <div class="product-detail flex justify-center gap-10 my-5 mx-20 pl-100 ">
+      <div>
+        <img src="{{product?.image}}" alt=""  class=" img rounded-3xl w-[300px]">
+      </div>
+      <div>
+          <h1 class="mb-9 text-[25px]">{{product?.name}}</h1>
+          <span class="my-9 text-[20px]">{{product?.detail}}</span>
+          <p class="my-9 text-[22px] text-red-500">{{product?.price}} USD</p>
+          <div class=" ">
+
+          <button class="bg-black hover:bg-black text-white text-[24px] font-bold py-3 px-4 border-b-4 rounded-3xl w-full"> <a class="btn btn-danger" (click)="addToCart(product.id,product.name,product.image,product.price)">Add To Card</a></button>
+          </div>
+      </div>
+  </div>
+</div>  
+<app-footer-component></app-footer-component>

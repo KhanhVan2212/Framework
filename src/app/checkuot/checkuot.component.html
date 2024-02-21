@@ -1,0 +1,64 @@
+<div class="min-h-screen flex flex-row bg-gray-100 ">
+<div id="checkout" class="w-full mt-10 mx-4 pl-2 overflow-x-auto shadow-md sm:rounded-lg ">
+    <h2 class="py-8 px-4">Thông tin giỏ hàng</h2>
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 p-20">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400" >
+            <tr>
+                <th scope="col" class="px-6 py-3">STT</th>
+                <th scope="col" class="px-6 py-3">Ảnh</th>
+                <th scope="col" class="px-6 py-3">Tên sản phẩm</th>
+                <th scope="col" class="px-6 py-3">Số lượng</th>
+                <th scope="col" class="px-6 py-3">Đơn giá</th>
+                <th scope="col" class="px-6 py-3">Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cart of carts; let i = index">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900">{{i+1}}</th>
+                <td class="px-6 py-4"><img width="60" src="{{cart.image}}"/></td>
+                <td class="px-6 py-4">{{cart.name}}</td>
+                <td class="px-6 py-4">{{cart.quantity}}</td>
+                <td class="px-6 py-4">{{cart.price}}</td>
+                <td class="px-6 py-4">{{cart.price*cart.quantity}}</td>
+                </tr>
+        </tbody>
+    </table>  
+    <span>Tổng tiền: {{total}}</span>  
+    <div class="bg-white py-8 px-4 shadow sm:rounded-lg">
+        <h1>Thông tin đặt hàng</h1>
+        <br>
+            <form [formGroup]="formCheckout" (ngSubmit)="onSubmit()" class="space-y-6">
+                <label>Họ tên</label>
+                <input formControlName="name" type="text" class="appearance-none rounded-md relative block  px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"/>
+                <div *ngIf="
+                !formCheckout.controls.name?.valid &&
+                (formCheckout.controls.name?.dirty ||
+                formCheckout.controls.name?.touched)
+              ">
+              <pre>Không để trống</pre>
+                </div>
+                <label>Địa chỉ</label>
+                <input formControlName="address" type="text" class="appearance-none rounded-md relative block  px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" formControlName="address"/>
+                <div *ngIf="
+                !formCheckout.controls.address?.valid &&
+                (formCheckout.controls.address?.dirty ||
+                formCheckout.controls.address?.touched)
+              ">
+              <pre>Không để trống</pre>
+                </div>
+                <label>Số điện thoại</label>
+                <input formControlName="phone" type="text" class="appearance-none rounded-md relative block  px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" formControlName="phone"/>
+                <div *ngIf="
+                !formCheckout.controls.phone?.valid &&
+                (formCheckout.controls.phone?.dirty ||
+                formCheckout.controls.phone?.touched)
+              ">
+              <pre>Không để trống </pre>
+                </div>
+                <button class="group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" [disabled]="!formCheckout.valid">Đặt hàng</button>
+            </form>
+    
+            <pre>{{mess}}</pre>
+        </div>
+</div>
+</div>

@@ -1,0 +1,225 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Giày dép"
+    },
+    {
+      "id": "2",
+      "name": "Quần áo"
+    },
+    {
+      "id": "7bca",
+      "name": "Lryx Watch"
+    },
+    {
+      "id": "0b05",
+      "name": "Phụ kiện"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Quần Jean Nam ",
+      "price": 200,
+      "cate_id": 1,
+      "image": "https://routine.vn/media/amasty/webp/catalog/product/cache/d0cf4470db45e8932c69fc124d711a7e/q/u/quan_kaki_nam_-_10s23pca100c_1_jpg.webp",
+      "detail": "Ống Đứng Diễu Thân Trơn Form Straight - 10F23DPA010"
+    },
+    {
+      "id": "1",
+      "name": "Quần Jean Nam ",
+      "price": 200,
+      "cate_id": 1,
+      "image": "https://routine.vn/media/amasty/webp/catalog/product/cache/d0cf4470db45e8932c69fc124d711a7e/q/u/quan_kaki_nam_-_10s23pca100c_1_jpg.webp",
+      "detail": "Ống Đứng Diễu Thân Trơn Form Straight - 10F23DPA010"
+    },
+    {
+      "id": "3",
+      "name": "Áo Polo Nam ",
+      "price": 200,
+      "cate_id": 1,
+      "image": "https://routine.vn/media/amasty/webp/catalog/product/cache/d0cf4470db45e8932c69fc124d711a7e/a/o/ao-polo-1-10f23pol016p-golden-brown-_1__1_1_jpg.webp",
+      "detail": "Áo Polo Nam Tay Bo 100% Cotton Trơn Form Fitted "
+    },
+    {
+      "id": "4",
+      "name": "Áo Polo Nam",
+      "price": 300,
+      "cate_id": 1,
+      "image": "https://routine.vn/media/amasty/webp/catalog/product/cache/d0cf4470db45e8932c69fc124d711a7e/1/0/10s23pol058-ponderosa-pine-_ao-polo-nam_3__1_jpg.webp",
+      "detail": "Áo Polo Nam Tay Ngắn Phối Cổ Và Tay Form Fitted"
+    },
+    {
+      "id": "0491",
+      "name": "Quần Jean Nam Ống Rộng ",
+      "price": 200,
+      "cate_id": 1,
+      "image": "https://routine.vn/media/catalog/product/cache/5b5632a96492396f42c72e22fdd64763/q/u/quan-jean-nam-4-10f23dpa023_black_1__2.jpg",
+      "detail": "Quần Jean Nam Ống Rộng Trơn Form Wide Leg - 10F23DPA023"
+    }
+  ],
+  "orders": [
+    {
+      "id": "41bd",
+      "name": "ádsad",
+      "address": "sadasda",
+      "phone": "123131131",
+      "status": "Đang xử lý"
+    },
+    {
+      "id": "d1b4",
+      "name": "12313asd",
+      "address": "ádas123121",
+      "phone": "ádsadsasđ",
+      "status": "Đang xử lý"
+    },
+    {
+      "id": "b7d8",
+      "name": "ád",
+      "address": "sad",
+      "phone": "222",
+      "status": "Đang xử lý"
+    },
+    {
+      "id": "798c",
+      "name": "nguyen khanh van",
+      "address": "ha noi ",
+      "phone": "0912321313",
+      "status": "Đang xử lý"
+    },
+    {
+      "id": "413b",
+      "name": "ádds",
+      "address": "ấda",
+      "phone": "213123",
+      "status": "Đang xử lý"
+    }
+  ],
+  "order_details": [
+    {
+      "id": "e383",
+      "orderid": "41bd",
+      "pid": "1",
+      "quantity": 9,
+      "unit_price": 1800
+    },
+    {
+      "id": "ef52",
+      "orderid": "41bd",
+      "pid": "4",
+      "quantity": 2,
+      "unit_price": 600
+    },
+    {
+      "id": "4196",
+      "orderid": "d1b4",
+      "pid": "3",
+      "quantity": 1,
+      "unit_price": 200
+    },
+    {
+      "id": "cc10",
+      "orderid": "d1b4",
+      "pid": "4",
+      "quantity": 2,
+      "unit_price": 600
+    },
+    {
+      "id": "4019",
+      "orderid": "b7d8",
+      "pid": "1",
+      "quantity": 2,
+      "unit_price": 400
+    },
+    {
+      "id": "2e7f",
+      "orderid": "b7d8",
+      "pid": "3",
+      "quantity": 1,
+      "unit_price": 200
+    },
+    {
+      "id": "b637",
+      "orderid": "798c",
+      "pid": "3",
+      "quantity": 6,
+      "unit_price": 1200
+    },
+    {
+      "id": "fdd6",
+      "orderid": "413b",
+      "pid": "3",
+      "quantity": 1,
+      "unit_price": 200
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "anhvan123",
+      "password": "anhvan123123",
+      "email": "vannkph22621@fpt.edu.vn"
+    },
+    {
+      "id": "298a",
+      "username": "anhvan123",
+      "password": "anhvan123123",
+      "email": "vannkph22621@fpt.edu.vn"
+    },
+    {
+      "id": "0850",
+      "username": "anhvan123",
+      "password": "anhvan123123",
+      "email": "vannkph22621@fpt.edu.vn"
+    },
+    {
+      "id": "1a40",
+      "username": "anhvan123",
+      "password": "anhvan123123",
+      "email": "vannkph22621@fpt.edu.vn"
+    },
+    {
+      "id": "0ad7",
+      "username": "anhvan123",
+      "password": "anhvan123123",
+      "email": "vannkph22621@fpt.edu.vn"
+    },
+    {
+      "id": "7650",
+      "username": "anhvan123",
+      "password": "anhvan123123",
+      "email": "vannkph22621@fpt.edu.vn"
+    },
+    {
+      "id": "a1a5",
+      "username": "anhvan123",
+      "password": "anhvan123123",
+      "email": "vannkph22621@fpt.edu.vn"
+    },
+    {
+      "id": "e91b",
+      "username": "anhvan123",
+      "password": "anhvan123123",
+      "email": "vannkph22621@fpt.edu.vn"
+    },
+    {
+      "id": "dfb6",
+      "username": "anhvan123",
+      "password": "anhvan123123",
+      "email": "vannkph22621@fpt.edu.vn"
+    },
+    {
+      "id": "92d7",
+      "username": "anhvan123",
+      "password": "anhvan123123",
+      "email": "vannkph22621@fpt.edu.vn"
+    },
+    {
+      "id": "b52b",
+      "username": "anhvan123",
+      "password": "anhvan123123",
+      "email": "vannkph22621@fpt.edu.vn"
+    }
+  ]
+}
