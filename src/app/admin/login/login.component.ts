@@ -13,8 +13,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+   mess ="";
     loginForm = new FormGroup({
-      username: new FormControl('', Validators.required),
+      
       password: new FormControl('', [Validators.required,Validators.minLength(6)]),
       email: new FormControl('', [Validators.required,Validators.email]),
       // phone: new FormControl('', [Validators.required,Validators.pattern('0+[0-9]+')]),
@@ -23,25 +24,23 @@ export class LoginComponent {
      message = "";  
      http = inject(HttpClient);
      router = inject(Router);
-    onSubmit(){
-      let username = this.loginForm.controls.username.value;
-      let password = this.loginForm.controls.password.value;
-      let email = this.loginForm.controls.email.value;
-      
-      const body = {username: username, password: password , email: email};
-      this.http.post<any>('http://localhost:3000/users',body)
-      .subscribe((response:any)=>{
-         if(response.login) {
-        this.message = "Đăng nhập thành công";
-        localStorage.setItem('login','Oki');
-        this.router.navigate(['dashboard']);
-      }
-      else{
-        this.message = "Sai tên đăng nhập hoặc mật khẩu";
-      }
-      });
     
-    }
+      onSubmit(){
+       
+        let password = this.loginForm.controls.password.value;
+        let email = this.loginForm.controls.email.value;
+        // gửi request post đến api json-server-auth
+        this.http.post('http://localhost:3000/signin',{email,password}).subscribe(data => {
+          if (data!==null) {
+            console.log(data);   
+            localStorage.setItem('user',JSON.stringify(data));     
+            alert("Đăng nhập thành công")
+            this.router.navigate(["/"]);
+          }   
+        },err=>{
+         alert("Tài khoản không chính xác")
+        });
+      }
 }
 
 

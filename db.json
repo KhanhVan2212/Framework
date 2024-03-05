@@ -156,70 +156,14 @@
   ],
   "users": [
     {
-      "id": "1",
-      "username": "anhvan123",
-      "password": "anhvan123123",
-      "email": "vannkph22621@fpt.edu.vn"
+      "email": "vannkph22621@fpt.edu.vn",
+      "password": "$2a$10$wGEpnbQrOx4JX89Y8T9nWeA5ymZDuhYuM.k1v/HO.N7x.wMsMGaue",
+      "id": 1
     },
     {
-      "id": "298a",
-      "username": "anhvan123",
-      "password": "anhvan123123",
-      "email": "vannkph22621@fpt.edu.vn"
-    },
-    {
-      "id": "0850",
-      "username": "anhvan123",
-      "password": "anhvan123123",
-      "email": "vannkph22621@fpt.edu.vn"
-    },
-    {
-      "id": "1a40",
-      "username": "anhvan123",
-      "password": "anhvan123123",
-      "email": "vannkph22621@fpt.edu.vn"
-    },
-    {
-      "id": "0ad7",
-      "username": "anhvan123",
-      "password": "anhvan123123",
-      "email": "vannkph22621@fpt.edu.vn"
-    },
-    {
-      "id": "7650",
-      "username": "anhvan123",
-      "password": "anhvan123123",
-      "email": "vannkph22621@fpt.edu.vn"
-    },
-    {
-      "id": "a1a5",
-      "username": "anhvan123",
-      "password": "anhvan123123",
-      "email": "vannkph22621@fpt.edu.vn"
-    },
-    {
-      "id": "e91b",
-      "username": "anhvan123",
-      "password": "anhvan123123",
-      "email": "vannkph22621@fpt.edu.vn"
-    },
-    {
-      "id": "dfb6",
-      "username": "anhvan123",
-      "password": "anhvan123123",
-      "email": "vannkph22621@fpt.edu.vn"
-    },
-    {
-      "id": "92d7",
-      "username": "anhvan123",
-      "password": "anhvan123123",
-      "email": "vannkph22621@fpt.edu.vn"
-    },
-    {
-      "id": "b52b",
-      "username": "anhvan123",
-      "password": "anhvan123123",
-      "email": "vannkph22621@fpt.edu.vn"
+      "email": "nguyenkhanhvan221202@gmail.com",
+      "password": "$2a$10$Ycg/tDzTEsTgeEB7E0PhDeAhs1nNYg2.zUTlSnBiV/TTmej8XEYSu",
+      "id": 2
     }
   ]
 }

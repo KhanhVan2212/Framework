@@ -44,7 +44,7 @@ export class HeaderComponentComponent {
     {
       id: 5,
       title: 'Đăng nhập',
-      url: '/login',
+      url: '/signin',
       parent: 0,
     },
     {
@@ -55,7 +55,7 @@ export class HeaderComponentComponent {
     },
     {
       id: 7,
-      title: 'Thanh Toan',
+      title: 'Thanh Toán',
       url: '/checkout',
       parent: 0,
     },

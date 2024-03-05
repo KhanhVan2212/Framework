@@ -34,6 +34,6 @@ export const routes: Routes = [
     { path: 'edit-category/:id', component: CategoryEditComponent },
   ],
   },
-  { path: 'login', component: LoginComponent },
+  { path: 'signin', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
 ];
